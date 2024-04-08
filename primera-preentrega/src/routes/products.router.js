@@ -5,7 +5,7 @@ import { productManager } from "../app.js";
 const productsRouter = Router()
 
 //hhtp://localhost:8080/products
-productsRouter.get("/", async(req, res)=>{
+/* productsRouter.get("/", async(req, res)=>{
     try{
         const [limit]= req.query;
         const products = await productManager.getProducts()
@@ -23,6 +23,28 @@ productsRouter.get("/", async(req, res)=>{
         console.log(error);
         res.send ("Error al intentar recibir productos")
         
+    }
+}) */
+
+
+productsRouter.get("/", async(req, res)=>{
+    try{
+        const limit = Number(req.query.limit);
+        if (isNaN(limit) || limit < 1) {
+            return res.status(400).send("El límite debe ser un número positivo");
+        }
+
+        const products = await productManager.getProducts()
+
+        if(limit){
+            const limitedProducts = products.slice(0, limit)
+            return res.json(limitedProducts)
+        }
+        return res.json(products)
+    }
+    catch(error){
+        console.error(error);
+        res.status(500).send("Error al intentar recibir productos")
     }
 })
 
