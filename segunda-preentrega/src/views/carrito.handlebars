@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <!-- Agrega tus enlaces CSS aquí -->
+</head>
+<body class="border border-dark bg-secondary">
+    <!-- Enlace de regreso al inicio -->
+    <a class="mx-5 my-5 btn btn-success" href="/">Inicio</a>
+
+    <!-- Contenedor principal del carrito -->
+    <div class="container col-12 border border-primary">
+        <!-- Título del carrito -->
+        <h1 class="text-center mb-4 fs-1 font-monospace">Carrito de compras</h1>
+
+        <!-- Filas de productos -->
+        <div class="row row-cols-md-4 row-cols-md-5">
+            {{#each products}}
+            <!-- Tarjeta de producto -->
+            <div class="col mb-4">
+                <div class="card h-100 bg-light">
+                    <!-- Encabezado de la tarjeta -->
+                    <div class="card-header bg-primary text-white">
+                        <i class="bi bi-info-circle"></i> ID: {{this.product.id}}
+                    </div>
+
+                    <!-- Cuerpo de la tarjeta -->
+                    <div class="card-body">
+                        <!-- Título del producto -->
+                        <h5 class="card-title text-black fs-4 font-monospace">{{this.product.title}}</h5>
+                        <ul class="list-unstyled">
+                            <!-- Descripción del producto -->
+                            <li><i class="bi bi-file-text"></i> Descripción: {{this.product.description}}</li>
+                            <!-- Precio del producto -->
+                            <li><i class="bi bi-currency-dollar"></i> Precio: ${{this.product.price}}</li>
+                            <!-- Código del producto -->
+                            <li><i class="bi bi-tag"></i> Código: {{this.product.code}}</li>
+                            <!-- Categoría del producto -->
+                            <li><i class="bi bi-grid"></i> Categoría: {{this.product.category}}</li>
+                            <!-- Estado del producto -->
+                            <li><i class="bi bi-check-circle"></i> Estado: {{this.product.status}}</li>
+                            <!-- Stock del producto -->
+                            <li><i class="bi bi-box"></i> Stock: {{this.product.stock}}</li>
+                            <!-- Imagen del producto -->
+                            <li>
+                                <img src="{{this.product.thumbnail}}" alt="{{this.product.title}}" class="img-fluid mt-2">
+                            </li>
+                            <!-- Cantidad del producto en el carrito -->
+                            <li>Cantidad: {{this.quantity}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    <!-- Agrega tus scripts y enlaces JS aquí -->
+</body>
+</html>

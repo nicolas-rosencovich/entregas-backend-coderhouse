@@ -1,0 +1,93 @@
+/* Estilos para el cuerpo de la página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5; /* Color de fondo */
+    color: #333; /* Color de texto principal */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para los títulos */
+h2 {
+    color: #1a1a1a; /* Color de título */
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para las líneas divisorias */
+hr {
+    border: none;
+    border-top: 1px solid #ccc; /* Color de línea */
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Estilos para las listas */
+ul {
+    padding: 0;
+}
+
+/* Estilos para los elementos de la lista */
+li {
+    margin-bottom: 5px;
+}
+
+/* Estilos para los botones */
+button {
+    background-color: #007bff; /* Color de fondo */
+    color: #fff; /* Color de texto */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el mouse */
+}
+
+/* Estilos para los enlaces */
+a {
+    color: #007bff; /* Color del enlace */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+/* Estilos para los contenedores de productos */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px; /* Ancho máximo del contenedor */
+    background-color: #fff; /* Color de fondo */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilos para las imágenes de productos */
+.product-card img {
+    width: 100%;
+    max-width: 300px; /* Ancho máximo de la imagen */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para los botones dentro de los contenedores de productos */
+.product-card button {
+    margin-top: 10px;
+}
+
+/* Estilos para los precios dentro de los contenedores de productos */
+.product-card .price {
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 5px;
+}

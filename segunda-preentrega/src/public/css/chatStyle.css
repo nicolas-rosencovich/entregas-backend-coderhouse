@@ -1,0 +1,95 @@
+/* Estilos para el contenedor principal del chat */
+.chat-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e1e1e; /* Cambio de color de fondo */
+  font-family: 'Roboto', sans-serif; /* Cambio de fuente */
+  padding: 20px;
+  color: #ffffff; /* Cambio de color de texto */
+}
+
+/* Estilos para el encabezado del chat */
+.chat-header {
+  background-color: #303030; /* Cambio de color de fondo */
+  color: #ffffff;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 8px; /* Agregado de bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Cambio de sombra */
+}
+
+/* Estilos para el nombre de usuario en el encabezado */
+.username {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Estilos para el contenedor de mensajes */
+.message-container {
+  width: 100%;
+  max-width: 600px;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: #424242; /* Cambio de color de fondo */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #ffffff; /* Cambio de color de texto */
+}
+
+/* Estilos para cada mensaje */
+.message {
+  background-color: #757575; /* Cambio de color de fondo */
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+  max-width: 80%;
+}
+
+/* Estilos para el mensaje de conexión */
+.message.connect {
+  text-align: center;
+  font-style: italic;
+}
+
+/* Estilos para el formulario de enviar mensaje */
+.message-form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Estilos para el campo de entrada de mensaje */
+.message-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #4d4d4d; /* Cambio de color del borde */
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: #2e2e2e; /* Cambio de color de fondo */
+  color: #ffffff; /* Cambio de color de texto */
+}
+
+/* Estilos para el botón de enviar mensaje */
+.send-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.send-button:hover {
+  background-color: #0056b3;
+}

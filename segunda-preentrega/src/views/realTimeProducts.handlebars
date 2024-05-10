@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos en Tiempo Real</title>
+</head>
+<body>
+    <div class="containerRealTime">
+        <!-- Enlaces de navegación -->
+        <a class="mx-5 my-5 btn btn-success" href="/">Inicio</a>
+        
+        <!-- Formulario para agregar y modificar productos -->
+        <form class="row g-3 mx-5" id="formProduct">
+            <h1 class="mb-4 font-monospace">Lista en tiempo real - Crear Producto</h1>
+            
+            <!-- Nombre del Producto -->
+            <div class="col-md-4">
+                <label for="title" class="form-label">Nombre del producto</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-alphabet-uppercase"></i></span>
+                    <input type="text" class="form-control" name="title" id="title" placeholder="Ingresar nombre producto" required>
+                </div>
+            </div>
+            
+            <!-- Descripcion -->
+            <!-- Aquí van los campos restantes del formulario -->
+            
+            <!-- Boton Registrar -->
+            <div class="col-md-8 mt-4">
+                <button class="btn btn-primary" type="submit" id="add-btn">Registrar producto</button>
+            </div>
+            <hr>
+            
+            <!-- Eliminar producto por ID -->
+            <h4>Eliminar producto</h4>
+            <div class="col-md-6">
+                <label for="id-product" class="form-label">ID del producto</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-trash"></i></span>
+                    <input type="text" class="form-control" name="id-prod" id="id-prod" placeholder="Ej. 123">
+                </div>
+            </div>
+            
+            <!-- Botones de Eliminar y Modificar -->
+            <div class="col-md-6 mt-5">
+                <button class="btn btn-danger" type="button" id="delete-id-btn">Eliminar producto</button>
+                <button class="btn btn-warning" type="button" id="update-id-btn">Modificar producto</button>
+            </div>
+            <hr>
+        </form>
+        
+        <!-- Lista de productos -->
+        <div class="row mt-8" id="list-products">
+            <!-- Aquí se mostrarán los productos en tiempo real -->
+        </div>
+    </div>
+    
+    <!-- Script para la comunicación en tiempo real con el servidor -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/realTimeProducts.js"></script>
+</body>
+</html>
