@@ -1,0 +1,39 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ }
+ 
+ /* Estilos para los títulos h2 */
+ h2 {
+    color: blue; /* Cambio de color a azul */
+    margin-bottom: 20px; /* Aumenta el espacio inferior */
+ }
+ 
+ /* Estilos para las tarjetas */
+ .card {
+    background-color: #f4a460; /* Cambio de color de fondo a naranja */
+    border-radius: 20px; /* Aumenta el radio de borde */
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.4s; /* Agrega una transición suave al hacer hover */
+ }
+ 
+ .card:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al hacer hover */
+ }
+ 
+ /* Estilos para el contenedor principal */
+ .container {
+    width: 100%;
+    background: linear-gradient(to bottom, #ff5733, #ffc300); /* Cambia a un degradado lineal */
+    padding: 20px;
+ }
+ 
+ /* Estilos para el contenedor de tiempo real */
+ .containerRealTime {
+    background: linear-gradient(to bottom right, #4b0082, #ff1493); /* Cambia a un degradado diagonal */
+    padding: 20px;
+ }
+ 

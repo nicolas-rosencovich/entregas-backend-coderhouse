@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+</head>
+<body>
+    <h2>Productos</h2>
+    <hr>
+    <!-- Enlace para ver los productos en tiempo real -->
+    <a class="mx-5 my-5 btn btn-success" href="/realtimeproducts">Ver en Tiempo Real</a>
+    
+    <!-- Input para el ID del carrito -->
+    <input type="text" value="{{carritoId}}" id="inputCarrito">
+    
+    <!-- Iteración sobre los productos -->
+    {{#each productos}}
+    <div class="product-card">
+        <ul class="list-unstyled">
+            <li><i class="bi bi-file-text"> Título : {{title}}</i></li>
+            <hr>
+            <li><i class="bi bi-file-text"> Descripción : {{description}}</i></li>
+            <hr>
+            <li><i>Precio : $ {{price}}</i></li>
+            <hr>
+            <li><i class="bi bi-tag"></i> Código: {{code}}</li>
+            <hr>
+            <li><i class="bi bi-grid"></i> Categoría : {{category}}</li>
+            <hr>
+            <li><i class="bi bi-check-circle"> Estado : {{status}}</i></li>
+            <hr>
+            <li><i class="bi bi-box"></i> Stock : {{stock}}</li>
+            <hr>
+            <li>
+                <img src="{{thumbnail}}" alt="{{title}}" class="img-fluid mt-2">
+            </li>
+            <!-- Botón para agregar el producto al carrito -->
+            <button onclick="comprar('{{_id}}')">Agregar a Carrito</button>
+        </ul>
+    </div>
+    {{/each}}
+    <br>
+    <br>
+    <!-- Enlace para ver el carrito -->
+    <a href="">Ver Carrito</a>
+    
+    <!-- Script para la función de agregar al carrito -->
+    <script src="/js/productos.js"></script>
+</body>
+</html>

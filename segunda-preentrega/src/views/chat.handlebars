@@ -1,0 +1,32 @@
+<div id="chat-container">
+    <!-- Encabezado del chat -->
+    <div id="chat-header">
+        <h4>Servicio de Chat</h4>
+        <h6 id="name-user">Usuario</h6>
+        <img src="https://i.ibb.co/0sSTRDc/imgen-chat.png" alt="Logo Servicio de Atención al Cliente" id="customer-service-logo">
+    </div>
+
+    <!-- Mensajes del chat -->
+    <div id="chat-messages">
+        <!-- Placeholder para mensajes entrantes y salientes -->
+        <div class="message sender">
+            <div class="user-info">
+                <div class="sender-name">Conectado</div>
+            </div>
+            <div id="chat">Cargando mensajes...</div>
+        </div>
+    </div>
+
+    <!-- Formulario para enviar mensajes -->
+    <form id="formulario">
+        <input type="text" name="mensaje" id="mensaje" placeholder="Escribe tu mensaje...">
+        <button id="sendMessage"><i class="fas fa-paper-plane"></i> Enviar</button>
+        <button id="clearChat"><i class="fas fa-trash"></i> Vaciar Chat</button>
+    </form>
+</div>
+
+<!-- Bibliotecas y scripts -->
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/chat.js"></script>
