@@ -1,4 +1,5 @@
 import { cartsModel } from "../dao/models/carts.model.js";
+import mongoose from 'mongoose';
 
 export default class CartManager {
     // Campo utilizado para el ID en la base de datos
@@ -32,7 +33,7 @@ export default class CartManager {
         }
     }
 
-    // Método para obtener un carrito por su ID
+   /*  // Método para obtener un carrito por su ID
     async getCartById(id) {
         try {
             // Buscar un carrito por su ID en la base de datos y obtener sus productos poblados
@@ -42,7 +43,24 @@ export default class CartManager {
             console.error("Error al obtener el carrito por ID:", error);
             return null;
         }
+    } */
+
+    // Método para obtener un carrito por su ID
+async getCartById(id) {
+    try {
+        // Verificar si el ID es un ObjectId válido de MongoDB
+        if (!mongoose.Types.ObjectId.isValid(id)) {
+            throw new Error('ID de MongoDB no válido');
+        }
+
+        // Buscar un carrito por su ID en la base de datos y obtener sus productos poblados
+        return await cartsModel.findOne({ _id: id }).populate("products.product").lean();
+    } catch (error) {
+        // Manejar errores si ocurre algún problema al obtener el carrito por su ID
+        console.error("Error al obtener el carrito por ID:", error);
+        return null;
     }
+}
 
     // Método para obtener un carrito por un filtro dado
     async getOneBy(filtro = {}) {
@@ -138,3 +156,4 @@ export default class CartManager {
         }
     }
 }
+
